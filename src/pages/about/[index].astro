@@ -1,0 +1,12 @@
+---
+
+export function getStaticPaths() {
+	return [
+		{params: {index: '1'}},
+		{params: {index: 'rover'}},
+		{params: {index: 'spot'}},
+	];
+}
+const { index } = Astro.params;
+---
+<div>About page. Index from route, {index}!</div>
